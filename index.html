@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>One Way Ticket</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <audio id="pianoMusic" loop>
+  <source src="assets/audio/piano.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="trainAmbience" loop>
+  <source src="assets/audio/train-ambience.mp3" type="audio/mpeg">
+</audio>
+
+<button id="weatherToggle" class="weather-toggle">
+  ❄ Snowfall
+</button>
+
+  <section class="opening-scene active" id="openingScene">
+    <div class="stars-layer"></div>
+    <div class="stars-layer stars-layer-two"></div>
+
+    <div class="moon"></div>
+
+    <div class="cloud cloud-left"></div>
+    <div class="cloud cloud-right"></div>
+    <div class="cloud cloud-bottom-left"></div>
+    <div class="cloud cloud-bottom-right"></div>
+
+    <div class="platform">
+      <div class="bench"></div>
+      <div class="lamp">
+        <div class="lamp-light"></div>
+        <div class="lamp-post"></div>
+        <div class="platform-sign">7</div>
+      </div>
+    </div>
+
+    <main class="hero-content">
+      <h1>One Way Ticket</h1>
+
+      <div class="divider">
+        <span></span>
+        <p>✦</p>
+        <span></span>
+      </div>
+
+      <p class="subtitle">One passenger has been expected.</p>
+
+      <button id="beginBtn">✦ Begin Journey ✦</button>
+
+      <p class="warning">Warning: emotional damage possible. 😌</p>
+    </main>
+  </section>
+
+  <section class="ticket-scene" id="ticketScene">
+    <div class="ticket-card">
+      <p class="ticket-label">NIGHT RAILWAY SERVICE</p>
+
+      <h2>One Way Ticket</h2>
+
+      <div class="ticket-line"></div>
+
+      <div class="ticket-info">
+        <p><strong>Passenger:</strong> Siena Lardizabal</p>
+        <p><strong>From:</strong> Anchorage, Alaska</p>
+        <p><strong>To:</strong> Montreal, Canada</p>
+        <p><strong>Platform:</strong> 7</p>
+      </div>
+
+      <div class="stamp" id="stamp">APPROVED</div>
+
+      <p class="conductor-text" id="conductorText">
+        Conductor says: “Hm. Destination seems dangerous.”
+      </p>
+
+      <button id="stampBtn">Stamp Ticket</button>
+      <button id="boardBtn" class="hidden">Board Train</button>
+    </div>
+  </section>
+
+<section class="train-scene" id="trainScene">
+
+  <div class="train-view">
+
+    <div class="window-frame">
+
+      <div class="window-glass">
+
+        <div class="weather-layer snow active-weather" id="snowLayer"></div>
+<div class="weather-layer rain" id="rainLayer"></div>
+
+        <div class="moving-stars"></div>
+
+        <div class="window-moon"></div>
+
+        <!-- LEO -->
+        <svg class="constellation leo" viewBox="0 0 320 230">
+
+          <polyline points="45,165 95,135 145,145 190,120 225,80 255,55" />
+
+          <polyline points="190,120 225,150 270,145" />
+
+          <polyline points="145,145 120,95 150,55 200,45 225,80" />
+
+          <circle cx="45" cy="165" r="4" />
+          <circle cx="95" cy="135" r="4" />
+          <circle cx="145" cy="145" r="4" />
+          <circle cx="190" cy="120" r="4" />
+          <circle cx="225" cy="80" r="4" />
+          <circle cx="255" cy="55" r="4" />
+          <circle cx="225" cy="150" r="4" />
+          <circle cx="270" cy="145" r="4" />
+          <circle cx="120" cy="95" r="4" />
+          <circle cx="150" cy="55" r="4" />
+          <circle cx="200" cy="45" r="4" />
+
+          <text x="120" y="205"></text>
+
+          <text x="145" y="226"></text>
+
+        </svg>
+
+        <!-- CAPRICORN -->
+        <svg class="constellation capricorn" viewBox="0 0 340 230">
+
+          <polyline points="45,85 95,120 145,105 190,135 235,115 290,150" />
+
+          <polyline points="190,135 155,175 100,185" />
+
+          <polyline points="235,115 260,75 300,85" />
+
+          <circle cx="45" cy="85" r="4" />
+          <circle cx="95" cy="120" r="4" />
+          <circle cx="145" cy="105" r="4" />
+          <circle cx="190" cy="135" r="4" />
+          <circle cx="235" cy="115" r="4" />
+          <circle cx="290" cy="150" r="4" />
+          <circle cx="155" cy="175" r="4" />
+          <circle cx="100" cy="185" r="4" />
+          <circle cx="260" cy="75" r="4" />
+          <circle cx="300" cy="85" r="4" />
+
+          <text x="105" y="210"></text>
+
+          <text x="155" y="230"></text>
+
+        </svg>
+
+        <div class="distant-lake"></div>
+
+        <div class="mountains"></div>
+
+      </div>
+
+    </div>
+
+    <!-- CABIN DETAILS -->
+    <div class="cabin-details">
+
+      <div class="curtain curtain-left"></div>
+
+      <div class="curtain curtain-right"></div>
+
+      <div class="cabin-lamp"></div>
+
+      <div class="seat"></div>
+
+      <div class="table"></div>
+
+      <div class="cup"></div>
+
+      <div class="book"></div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE PANEL -->
+  <div class="train-interior">
+
+    <div class="lamp-glow"></div>
+
+    <div class="railway-label">
+      ✦ NIGHT RAILWAY SERVICE ✦
+    </div>
+<p class="station-announcement" id="stationAnnouncement">
+  Now departing: Anchorage, Alaska.
+</p>
+
+    <div class="dialogue-box">
+
+      <p id="trainDialogue">
+        You somehow became part of my routine.
+      </p>
+
+      <button id="nextDialogueBtn">
+        Next Stop →
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="flower-scene" id="flowerScene">
+
+  <div class="flower-bg-stars"></div>
+
+  <div class="flower-card">
+
+    <p class="scene-label">THE FLOWER CART</p>
+
+    <h2>Build a Bouquet</h2>
+
+    <p class="flower-intro">
+      The conductor pauses beside a tiny flower cart and says,
+      “Pick carefully. These flowers are suspiciously emotionally relevant.”
+    </p>
+
+    <div class="bouquet" id="bouquet">
+      <p>Your bouquet is waiting...</p>
+    </div>
+
+    <div class="flower-options">
+
+      <button class="flower-btn" data-flower="Lavender" data-meaning="For the comfort you bring.">
+        🪻 Lavender
+      </button>
+
+      <button class="flower-btn" data-flower="Sunflower" data-meaning="For the warmth you carry.">
+        🌻 Sunflower
+      </button>
+
+      <button class="flower-btn" data-flower="Tulip" data-meaning="For the patience you taught me.">
+        🌷 Tulip
+      </button>
+
+      <button class="flower-btn" data-flower="Rose" data-meaning="For the feelings I definitely failed to hide.">
+        🌹 Rose
+      </button>
+
+      <button class="flower-btn" data-flower="Lily" data-meaning="For the sincerity in this very dramatic train journey.">
+        🌺 Lily
+      </button>
+
+    </div>
+
+    <p id="flowerMeaning" class="flower-meaning">
+      Choose a flower to begin.
+    </p>
+
+    <button id="finishBouquetBtn" class="hidden">
+      Tie the Bouquet
+    </button>
+
+  </div>
+
+</section>
+
+<section class="confession-scene" id="confessionScene">
+
+  <div class="confession-stars"></div>
+
+  <div class="final-bouquet">🪻 🌻 🌷 🌹 🌺</div>
+
+  <div class="confession-card">
+
+    <p class="scene-label">FINAL STOP</p>
+
+    <h2>The Future</h2>
+
+    <p class="confession-text">
+      I think somewhere between the late-night talks, the laughs,
+and all the little things that somehow became important...
+
+I ended up wanting you with everything attached.
+
+Not just the easy parts.
+Not just the pretty moments.
+But all of you.
+
+I want you exactly as you are,
+and everything that comes with you.
+
+And somewhere along the way...
+I started hoping this journey could be ours.
+    </p>
+
+    <p class="confession-text">
+      So, with a bouquet that will one day be yours...
+    </p>
+
+    <h3>Will you have me as your boyfriend?</h3>
+
+    <div class="answer-buttons">
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="ending-scene" id="endingScene">
+
+    <div class="bouquet-particles" id="bouquetParticles"></div>
+  
+    <div class="ending-stars"></div>
+
+  <div class="lantern lantern-one"></div>
+  <div class="lantern lantern-two"></div>
+  <div class="lantern lantern-three"></div>
+  <div class="lantern lantern-four"></div>
+
+  <div class="ending-station">
+    <div class="station-glow"></div>
+  </div>
+
+  <div class="ending-card">
+
+    <p class="scene-label">ARRIVAL CONFIRMED</p>
+
+    <h2>Journey Updated</h2>
+
+    <div class="blooming-bouquet">
+     🪻  🌻 🌷 🌹 🌺
+    </div>
+
+    <div class="final-ticket">
+      <p>ONE WAY TICKET</p>
+      <h3>Two Passengers</h3>
+      <span>Destination: The Future</span>
+    </div>
+
+    <p class="ending-message">
+      The train has arrived at a glowing station, the bouquet has bloomed,
+      and the stars have officially aligned in the best way possible.
+    </p>
+
+    <p class="final-thank-you">
+  Thank you for boarding this ridiculously emotional train ride with me.
+</p>
+
+  </div>
+
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
