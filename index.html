@@ -94,110 +94,104 @@
       <div class="window-glass">
 
         <div class="weather-layer snow active-weather" id="snowLayer"></div>
-<div class="weather-layer rain" id="rainLayer"></div>
+        <div class="weather-layer rain" id="rainLayer"></div>
 
         <div class="moving-stars"></div>
-
         <div class="window-moon"></div>
 
+        <div class="distant-town"></div>
+<div class="passing-train"></div>
+<div class="shooting-star"></div>
+
         <!-- LEO -->
-        <svg class="constellation leo" viewBox="0 0 320 230">
+        <svg class="constellation leo" viewBox="0 0 360 240">
+          <polyline class="constellation-line" points="40,170 95,135 150,140 205,125 255,130 305,150" />
+          <polyline class="constellation-line" points="150,140 142,92 170,62 210,42 250,70 255,130" />
+          <polyline class="constellation-line" points="210,42 245,35 275,55 250,70" />
 
-          <polyline points="45,165 95,135 145,145 190,120 225,80 255,55" />
-
-          <polyline points="190,120 225,150 270,145" />
-
-          <polyline points="145,145 120,95 150,55 200,45 225,80" />
-
-          <circle cx="45" cy="165" r="4" />
+          <circle cx="40" cy="170" r="4" />
           <circle cx="95" cy="135" r="4" />
-          <circle cx="145" cy="145" r="4" />
-          <circle cx="190" cy="120" r="4" />
-          <circle cx="225" cy="80" r="4" />
-          <circle cx="255" cy="55" r="4" />
-          <circle cx="225" cy="150" r="4" />
-          <circle cx="270" cy="145" r="4" />
-          <circle cx="120" cy="95" r="4" />
-          <circle cx="150" cy="55" r="4" />
-          <circle cx="200" cy="45" r="4" />
+          <circle cx="150" cy="140" r="4" />
+          <circle cx="205" cy="125" r="4" />
+          <circle cx="255" cy="130" r="4" />
+          <circle cx="305" cy="150" r="4" />
+          <circle cx="142" cy="92" r="4" />
+          <circle cx="170" cy="62" r="4" />
+          <circle cx="210" cy="42" r="4" />
+          <circle cx="245" cy="35" r="4" />
+          <circle cx="275" cy="55" r="4" />
 
-          <text x="120" y="205"></text>
-
-          <text x="145" y="226"></text>
-
+          <text x="130" y="215"></text>
         </svg>
 
         <!-- CAPRICORN -->
-        <svg class="constellation capricorn" viewBox="0 0 340 230">
-
-          <polyline points="45,85 95,120 145,105 190,135 235,115 290,150" />
-
-          <polyline points="190,135 155,175 100,185" />
-
-          <polyline points="235,115 260,75 300,85" />
+        <svg class="constellation capricorn" viewBox="0 0 390 250">
+          <polyline class="constellation-line" points="45,85 95,95 155,100 220,78 310,35" />
+          <polyline class="constellation-line" points="45,85 105,150 165,185 215,205 250,165 280,110 310,35" />
+          <polyline class="constellation-line" points="280,110 335,92" />
 
           <circle cx="45" cy="85" r="4" />
-          <circle cx="95" cy="120" r="4" />
-          <circle cx="145" cy="105" r="4" />
-          <circle cx="190" cy="135" r="4" />
-          <circle cx="235" cy="115" r="4" />
-          <circle cx="290" cy="150" r="4" />
-          <circle cx="155" cy="175" r="4" />
-          <circle cx="100" cy="185" r="4" />
-          <circle cx="260" cy="75" r="4" />
-          <circle cx="300" cy="85" r="4" />
+          <circle cx="95" cy="95" r="4" />
+          <circle cx="155" cy="100" r="4" />
+          <circle cx="220" cy="78" r="4" />
+          <circle cx="310" cy="35" r="4" />
+          <circle cx="105" cy="150" r="4" />
+          <circle cx="165" cy="185" r="4" />
+          <circle cx="215" cy="205" r="4" />
+          <circle cx="250" cy="165" r="4" />
+          <circle cx="280" cy="110" r="4" />
+          <circle cx="335" cy="92" r="4" />
 
-          <text x="105" y="210"></text>
-
-          <text x="155" y="230"></text>
-
+          <text x="115" y="238"></text>
         </svg>
 
         <div class="distant-lake"></div>
-
         <div class="mountains"></div>
 
       </div>
 
     </div>
 
-    <!-- CABIN DETAILS -->
     <div class="cabin-details">
-
       <div class="curtain curtain-left"></div>
-
       <div class="curtain curtain-right"></div>
-
       <div class="cabin-lamp"></div>
-
       <div class="seat"></div>
-
       <div class="table"></div>
-
       <div class="cup"></div>
-
       <div class="book"></div>
+      <div class="window-reflection"></div>
 
+<div class="travel-note" id="travelNote">
+  Click me
+</div>
+
+<div class="tiny-photo" id="tinyPhoto">
+
+  <img
+    src="assets/images/siena.jpg"
+    alt="favorite passenger"
+  >
+
+</div>
     </div>
 
-  </div>
+    <div class="floating-dialogue-card">
 
-  <!-- RIGHT SIDE PANEL -->
-  <div class="train-interior">
-
-    <div class="lamp-glow"></div>
-
-    <div class="railway-label">
-      ✦ NIGHT RAILWAY SERVICE ✦
-    </div>
-<p class="station-announcement" id="stationAnnouncement">
-  Now departing: Anchorage, Alaska.
-</p>
-
-    <div class="dialogue-box">
+      <div class="railway-label">
+        ✦ NIGHT RAILWAY SERVICE ✦
+      </div>
 
       <p id="trainDialogue">
         You somehow became part of my routine.
+      </p>
+
+      <div class="dialogue-divider">
+        ✦
+      </div>
+
+      <p class="station-announcement" id="stationAnnouncement">
+        Now departing: Anchorage, Alaska.
       </p>
 
       <button id="nextDialogueBtn">
@@ -222,7 +216,7 @@
 
     <p class="flower-intro">
       The conductor pauses beside a tiny flower cart and says,
-      “Pick carefully. These flowers are suspiciously emotionally relevant.”
+      “Pick carefully. These flowers have been carefully chosen just for you.”
     </p>
 
     <div class="bouquet" id="bouquet">
@@ -247,7 +241,7 @@
         🌹 Rose
       </button>
 
-      <button class="flower-btn" data-flower="Lily" data-meaning="For the sincerity in this very dramatic train journey.">
+      <button class="flower-btn" data-flower="Lily" data-meaning="For your sincerity.">
         🌺 Lily
       </button>
 
@@ -275,34 +269,35 @@
 
     <p class="scene-label">FINAL STOP</p>
 
-    <h2>The Future</h2>
+    <h2>A Message From The Intercom</h2>
 
     <p class="confession-text">
-      I think somewhere between the late-night talks, the laughs,
-and all the little things that somehow became important...
+      The conductor gently clears his throat and says:
+    </p>
 
-I ended up wanting you with everything attached.
-
-Not just the easy parts.
-Not just the pretty moments.
-But all of you.
-
-I want you exactly as you are,
-and everything that comes with you.
-
-And somewhere along the way...
-I started hoping this journey could be ours.
+    <p class="confession-text conductor-message">
+      “Passenger Siena, please direct your attention to the call.
+      If your camera is not open yet, kindly turn it on.
+      The person across from you has something he would like to say himself.”
     </p>
 
     <p class="confession-text">
-      So, with a bouquet that will one day be yours...
+      Please press the button below ONLY when he gives you the signal.
     </p>
 
-    <h3>Will you have me as your boyfriend?</h3>
+    <button id="revealQuestionBtn">
+      I’m ready
+    </button>
 
-    <div class="answer-buttons">
-      <button id="yesBtn">Yes</button>
-      <button id="noBtn">No</button>
+    <div id="finalQuestionBox" class="hidden">
+
+      <h3>Will you have me as your boyfriend?</h3>
+
+      <div class="answer-buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+      </div>
+
     </div>
 
   </div>
@@ -337,12 +332,11 @@ I started hoping this journey could be ours.
     <div class="final-ticket">
       <p>ONE WAY TICKET</p>
       <h3>Two Passengers</h3>
-      <span>Destination: The Future</span>
+      <span>Destination: Anywhere With You</span>
     </div>
 
     <p class="ending-message">
-      The train has arrived at a glowing station, the bouquet has bloomed,
-      and the stars have officially aligned in the best way possible.
+      The train has arrived at a glowing station, safely reaching its final destination.
     </p>
 
     <p class="final-thank-you">

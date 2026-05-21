@@ -55,6 +55,14 @@ const ticketCard = document.querySelector(".ticket-card");
 
 const bouquetParticles = document.getElementById("bouquetParticles");
 
+const travelNote = document.getElementById("travelNote");
+
+const tinyPhoto = document.getElementById("tinyPhoto");
+
+const revealQuestionBtn = document.getElementById("revealQuestionBtn");
+
+const finalQuestionBox = document.getElementById("finalQuestionBox");
+
 const pickedFlowers = [];
 
 /* DIALOGUE */
@@ -63,27 +71,39 @@ const dialogueLines = [
 
   "You somehow became part of my routine.",
 
-  "And I think my days got a little softer after meeting you.",
+  "Funny enough... I think we both started liking each other the first time we met. We just didn't really see each other enough to realize it yet.",
 
-  "Since the day we started talking, there hasn't been a night where I didn't fall asleep thinking about you.",
+  "And apparently while I was over here trying to play it cool, you were secretly wondering, 'when is this dumbass finally gonna talk to me?'",
 
-  "Your sentimental side somehow adds to your charm... making you even cuter than you already are.",
+  "Which is honestly funny because meanwhile I was busy convincing myself I wasn't already in trouble with you.",
 
-  "And whenever you talk about your hobbies and passions like sports, all I can do is stare into your eyes and fall even more for you.",
+  "Although to be fair... you also admitted you become awkward when you start liking someone because you don't want to embarrass yourself.",
 
-  "Btw... I want to learn more about the things no one has cared enough to know about you.",
+  "So, somehow the situation became a bit of a stalemate.",
 
-  "Because the thing is... I usually like being by myself. That's how I knew you were special, because for the first time in a while, I wanted someone else's company more than my own.",
+  "And yes, I'm completely aware that I waited until the absolute last minute.",
 
   "I still remember how big the smile was on my face the night I got home after our first date. Only you could make my face hurt from smiling too much.",
 
-  "I love the dirty jokes we make despite how much Mariana has corrupted you lol... and by the way, we're definitely gonna need a Lactaid sponsorship soon with the amount of dairy we've been consuming.",
+  "And your sentimental side somehow makes you even more adorable than you already are... which honestly feels a little unfair.",
 
-  "One day you're teaching me how to make pandesal using the cloth your lolo gave you and that is non-negotiable.",
+  "I love hearing you talk about your hobbies and passions because every time you do, I swear I end up smiling like an idiot.",
 
-  "I hope you know there's no one else out there that gets my attention the way you do.",
+  "And then you disappeared for three weeks with absolutely no signal, no messages, no calls... nothing.",
 
-  "Life has given me many good things... but none as beautiful as the luck of finding you."
+  "And weirdly enough, the silence made me realize something.",
+
+  "I realized how much I looked forward to talking to you. Hearing about your day, hearing your voice, or even the smallest random things.",
+
+  "I think that was the moment it really hit me how much space you quietly took up in my life.",
+
+  "And whenever work gives me one of those rough days, somehow our calls at night make up for it.",
+
+  "And on days when I start feeling down... I end up looking at your pictures for a bit and somehow my day gets brighter again.",
+
+  "And honestly? I still can't believe a guy like me somehow got lucky enough to find someone like you.",
+
+  "Life has given me a lot of good things, but none as beautiful as the luck of finding you."
 ];
 
 let currentLine = 0;
@@ -106,6 +126,10 @@ beginBtn.addEventListener("click", () => {
   }, 700);
 });
 
+revealQuestionBtn.addEventListener("click", () => {
+  revealQuestionBtn.classList.add("hidden");
+  finalQuestionBox.classList.remove("hidden");
+});
 
 let weatherMode = "snow";
 
@@ -127,6 +151,17 @@ weatherToggle.addEventListener("click", () => {
   }
 });
 
+travelNote.addEventListener("click", () => {
+  travelNote.textContent =
+    "Sit back and enjoy the ride!";
+});
+
+tinyPhoto.addEventListener("click", () => {
+
+  tinyPhoto.classList.toggle("photo-expanded");
+
+});
+
 /* STAMP */
 
 stampBtn.addEventListener("click", () => {
@@ -134,7 +169,7 @@ stampBtn.addEventListener("click", () => {
   stamp.classList.add("stamped");
 
   conductorText.textContent =
-    "Conductor says: “Ticket approved. Side effects may include smiling at your device.”";
+    "Conductor says: “Ticket approved. Please proceed to the train.”";
 
   stampBtn.classList.add("hidden");
 
@@ -158,7 +193,7 @@ boardBtn.addEventListener("click", () => {
     trainScene.classList.add("active");
 
     typeText(trainDialogue, dialogueLines[0], 28);
-  }, 850);
+  }, 950);
 });
 
 
@@ -185,7 +220,7 @@ function typeText(element, text, speed = 32) {
   typingInterval = setInterval(() => {
 
     element.textContent += text.charAt(i);
-
+element.scrollTop = element.scrollHeight;
     i++;
 
     if (i >= text.length) {
@@ -217,7 +252,7 @@ nextDialogueBtn.addEventListener("click", () => {
 
     if (currentLine === 3) {
       stationAnnouncement.textContent =
-        "Now passing: The Station of Calgary.";
+        "Now passing: The Station of Calgary, Canada.";
     }
 
     if (currentLine === 5) {
@@ -227,7 +262,7 @@ nextDialogueBtn.addEventListener("click", () => {
 
     if (currentLine === 8) {
       stationAnnouncement.textContent =
-        "Now approaching: The Station of Montreal.";
+        "Now approaching: The Station of Montreal, Canada.";
     }
 
     if (currentLine === 10) {
@@ -263,10 +298,13 @@ flowerButtons.forEach((button) => {
     flowerMeaning.textContent = meaning;
 
     if (pickedFlowers.length === 5) {
-      finishBouquetBtn.classList.remove("hidden");
-      flowerMeaning.textContent =
-        "The bouquet is complete. I'll get you the real one soon, I promise.";
-    }
+  finishBouquetBtn.classList.remove("hidden");
+
+  setTimeout(() => {
+    flowerMeaning.textContent =
+      "The bouquet is complete. I'll get you the real one soon, I promise!";
+  }, 1800);
+}
   });
 });
 
@@ -314,15 +352,15 @@ const noMessages = [
 
   "The conductor is judging you",
 
-  "This train was expensive you know",
+  "The train ticket was expensive you know",
 
   "Please reconsider 🧎",
 
-  "You're breaking the railway lore",
+  "The train might get derailed",
 
-  "The bouquet is crying",
+  "The bouquet is wilting",
 
-  "At least take the Lactaid sponsorship first",
+  "Holy D1 ragebaiter",
 
   "Emergency meeting with the conductor required",
 
