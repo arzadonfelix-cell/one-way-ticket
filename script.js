@@ -69,37 +69,33 @@ const pickedFlowers = [];
 
 const dialogueLines = [
 
-  "You somehow became part of my routine.",
+  "Hi Siena, welcome aboard! I think it's finally time we talk about how all of this happened.",
 
-  "Funny enough... I think we both started liking each other the first time we met. We just didn't really see each other enough to realize it yet.",
+  "Funny enough, as we've already talked about it, there was definitely attraction the first time we met. We just didn't really see each other enough to realize it yet.",
 
   "And apparently while I was over here trying to play it cool, you were secretly wondering, 'when is this dumbass finally gonna talk to me?'",
 
-  "Which is honestly funny because meanwhile I was busy convincing myself I wasn't already in trouble with you.",
+  "Which is honestly funny because the whole time, I was busy losing my mind over you with the occasional crash outs that Amelia heard... a lot.",
 
-  "Although to be fair... you also admitted you become awkward when you start liking someone because you don't want to embarrass yourself.",
+  "Although to be fair you also admitted you become awkward when you start liking someone because you don't want to embarrass yourself.",
 
   "So, somehow the situation became a bit of a stalemate.",
 
-  "And yes, I'm completely aware that I waited until the absolute last minute.",
+  "And yes, I'm completely aware that I waited until the absolute last minute to make a move on you and I do regret that.",
 
-  "I still remember how big the smile was on my face the night I got home after our first date. Only you could make my face hurt from smiling too much.",
+  "But, I'm still grateful for you. I remember how big the smile was on my face the night I got home from our date. Only you could make my face hurt from smiling too much.",
 
-  "And your sentimental side somehow makes you even more adorable than you already are... which honestly feels a little unfair.",
+  "And, complete side note, your sentimental side somehow makes you even more adorable than you already are... which honestly feels a little unfair.",
 
   "I love hearing you talk about your hobbies and passions because every time you do, I swear I end up smiling like an idiot.",
 
-  "And then you disappeared for three weeks with absolutely no signal, no messages, no calls... nothing.",
+  "And somewhere along the way, talking to you stopped feeling like something I did during my day and started becoming one of my favorite parts of it.",
 
-  "And weirdly enough, the silence made me realize something.",
+"I started looking forward to our calls more than I probably should admit, though half the time I'm probably just bothering you.",
 
-  "I realized how much I looked forward to talking to you. Hearing about your day, hearing your voice, or even the smallest random things.",
+"Whenever work gives me one of those rough days, somehow hearing your voice at night makes everything feel lighter again.",
 
-  "I think that was the moment it really hit me how much space you quietly took up in my life.",
-
-  "And whenever work gives me one of those rough days, somehow our calls at night make up for it.",
-
-  "And on days when I start feeling down... I end up looking at your pictures for a bit and somehow my day gets brighter again.",
+  "And on days when I start feeling down, I end up looking at your pictures for 'a bit' and somehow my day gets brighter again.",
 
   "And honestly? I still can't believe a guy like me somehow got lucky enough to find someone like you.",
 
