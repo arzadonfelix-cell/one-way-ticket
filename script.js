@@ -250,22 +250,22 @@ nextDialogueBtn.addEventListener("click", () => {
       typeText(trainDialogue, dialogueLines[currentLine], 28);
     }, 250);
 
-    if (currentLine === 3) {
+    if (currentLine === 5) {
       stationAnnouncement.textContent =
         "Now passing: The Station of Calgary, Canada.";
     }
 
-    if (currentLine === 5) {
+    if (currentLine === 7) {
       stationAnnouncement.textContent =
         "Reminder: Passengers are advised not to panic over getting flustered.";
     }
 
-    if (currentLine === 8) {
+    if (currentLine === 9) {
       stationAnnouncement.textContent =
         "Now approaching: The Station of Montreal, Canada.";
     }
 
-    if (currentLine === 10) {
+    if (currentLine === 12) {
       stationAnnouncement.textContent =
         "Final scenic route before the Flower Cart.";
     }
