@@ -2708,3 +2708,48 @@ z-index:2000;
     transform: translateY(0);
   }
 }
+
+.mobile-blocker {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .mobile-blocker {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    background:
+      radial-gradient(circle at 50% 20%, rgba(255, 215, 140, 0.16), transparent 30%),
+      linear-gradient(to bottom, #050713, #111832 55%, #291424);
+
+    color: #ffe7ba;
+    text-align: center;
+  }
+
+  .mobile-blocker-card {
+    max-width: 420px;
+    padding: 32px;
+    border-radius: 26px;
+    border: 1px solid rgba(255, 215, 140, 0.25);
+    background: rgba(22, 14, 12, 0.88);
+    box-shadow: 0 0 45px rgba(0,0,0,0.45);
+  }
+
+  .mobile-blocker-card h1 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+  }
+
+  .mobile-blocker-card p {
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+}
